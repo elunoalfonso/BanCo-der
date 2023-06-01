@@ -275,6 +275,7 @@ function eliminarFCI(fcis) {
 
 
 //INICIALIZACIÓN
+/*
 let salir = false;
 let inversion = {
   monto: 0,
@@ -322,3 +323,19 @@ while (!salir) {
   }
 
 }
+*/
+
+function generateButtons() {
+  const buttonList = document.querySelector('.button-list');
+
+  buttonList.innerHTML = '';
+
+  fcis.forEach((fciItem) => {
+    const button = document.createElement('button');
+    button.textContent = fciItem.nombre;
+
+    buttonList.appendChild(button);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', generateButtons);

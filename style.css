@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    background: linear-gradient(135deg, #1a2b34, #0e1821);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border: 2px solid #1a73e8;
+    border-radius: 8px;
+    padding: 40px;
+    width: 40%;
+    position: relative;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background: repeating-linear-gradient(45deg, #1a73e8, #1a73e8 10px, transparent 10px, transparent 20px);
+    z-index: -1;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, #1a73e8 10px, #1a73e8 20px);
+    z-index: -1;
+  }
+  
+  .title {
+    color: #1a73e8;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .subtitle {
+    color: #1a73e8;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .list-container {
+    background-color: #e3f2fd;
+    border: 1px solid #1a73e8;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .button-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .button-list button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
