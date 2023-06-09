@@ -6,17 +6,38 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <p class="idFCI">-1</p>
   <div class="container">
     <h1 class="title">BanCo-der</h1>
     <h2 class="subtitle">Simulador FCI</h2>
-    <div class="list-container">
+    <div id="listaBotones" class="list-container">
       <div class="button-list">
-
       </div>
     </div>
+    <p></p>
+    <div id="muestraFCI" class="list-container">
+      <h2 class="subtitle" id="nameFCI">Por favor, seleccione una opción</h2>
+        <li>Rendimiento del último mes: <b id="rendimientoMesFCI"></b></li>
+        <li>Volatilidad anualizada: <b id="volatilidadFCI"></b></li>
+        <li>Duración: <b id="duracionFCI"></b></li>
+        <li>Interés anual: <b id="interesAnualFCI"></b></li>
+    </div>
+    <p></p>
+    <div class="list-container">
+      <h2 class="subtitle">Simulador</h2>
+      <div class="input-group">
+        <label for="monto">Ingrese el monto a calcular:</label>
+        <input class="input-text" id="monto" type="text">
+      </div>
+      <div class="input-group">
+        <label for="meses">Ingrese los meses a calcular:</label>
+        <input class="input-text" id="meses" type="text">
+      </div>
+      <p id="resultado"></p>
+      <button class="buttonCalcular" onclick="calcularFCI()">Calcular</button>
+    </div>
+    
   </div>
   <script src="script.js"></script>
 </body>
 </html>
-
-<!-- WORK IN PROGRESS, FALTAN MODIFICACIONES -->

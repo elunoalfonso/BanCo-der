@@ -58,6 +58,8 @@ body {
     border: 1px solid #1a73e8;
     border-radius: 8px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   .button-list {
@@ -66,7 +68,7 @@ body {
     gap: 10px;
   }
   
-  .button-list button {
+  .button-list button, .buttonCalcular {
     background-color: #1a73e8;
     color: white;
     border: none;
@@ -76,4 +78,29 @@ body {
     font-size: 16px;
     cursor: pointer;
   }
+
+  .idFCI {
+    display: none;
+  }
+
+  .input-text {
+    background-color: white;
+    color: black;
+    border: 2px solid #1a73e8;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+    
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+  }
+  
   
