@@ -72,14 +72,13 @@ function generateButtons() {
 
 document.addEventListener('DOMContentLoaded', generateButtons);
 
+
 function clickBotones(id) {
+  let htmlFCI = "<div class=list-container-fci> <h2 class=subtitle>" + fcis[id].nombre + "</h2> <li>Rendimiento del último mes: <b>" + fcis[id].rendimientoMes + "</b></li> <li>Volatilidad anualizada: <b>" + fcis[id].volatilidad + "</b></li> <li>Duración: <b>" + fcis[id].duracion + "</b></li> <li>Interés anual: <b>" + fcis[id].interesAnual + "</b></li> </div>";
   document.getElementsByClassName("idFCI").innerHTML = id;
-  document.getElementById("nameFCI").innerText = fcis[id].nombre;
-  document.getElementById("rendimientoMesFCI").innerText = fcis[id].rendimientoMes;
-  document.getElementById("volatilidadFCI").innerText = fcis[id].volatilidad;
-  document.getElementById("duracionFCI").innerText = fcis[id].duracion;
-  document.getElementById("interesAnualFCI").innerText = fcis[id].interesAnual;
-}
+  document.getElementById("muestraFCI").innerHTML = htmlFCI;
+  document.getElementById("divSimulador").innerHTML = "<div class=list-container><h2 class=subtitle>Simulador</h2><div class=input-group><label for=monto>Ingrese el monto a calcular:</label><input class=input-text id=monto type=text></div><div class=input-group><label for=meses>Ingrese los meses a calcular:</label><input class=input-text id=meses type=text></div><p id=resultado></p><button class=buttonCalcular onclick=calcularFCI()>Calcular</button></div>"
+  }
 
 function calcularFCI() {
   let inversionMonto = document.getElementById("monto").value;
@@ -93,4 +92,10 @@ function calcularFCI() {
 
   let resultado = invertir(inversionMonto, inversionMeses, id);
   document.getElementById("resultado").innerText = ("Invirtiendo un monto de " + inversionMonto + " durante " + inversionMeses + " meses, se obtendría un monto final de: " + resultado);
+  Swal.fire({
+    title: 'Inversión Simulada',
+    text: "Invirtiendo un monto de $" + inversionMonto + " durante " + inversionMeses + " meses, se obtendría un monto final de: $" + resultado,
+    icon: 'info',
+    confirmButtonText: 'Confirmar'
+  })
 }

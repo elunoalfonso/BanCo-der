@@ -102,5 +102,12 @@ body {
   .input-group label {
     margin-right: 10px;
   }
-  
-  
+
+  .list-container-fci {
+    background-color: #e3f2fd;
+    border: 1px solid #1a73e8;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
